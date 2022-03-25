@@ -64,9 +64,9 @@ body{
             display: grid;
             grid-template-columns: .5fr 1fr;
             .brand{
-                padding: 5px 0 0 0;
+                padding: 10px 0 10px 0;
                 img{
-                    padding: 0 20px 0 20px;
+                    padding: 0 20px 0 5px;
                     &:nth-child(2){
                         margin-bottom: 10px;
                     }
@@ -116,11 +116,21 @@ body{
                 background-color: var(--clr-white);
                 border: none;
                 margin-right: 40px;
+                &:hover{
+                    background:none;
+                    color: var(--clr-white);
+                    border: 1px solid var(--clr-white);
+
+                }
 
             }
             .voir2{
                 color: var(--clr-white);
                 border-color: var(--clr-white);
+                &:hover{
+                    background-color: var(--clr-white);
+                    color: var(--clr-red);
+                }
             }
             .spidermen{
                 padding-top: 100px;
@@ -136,46 +146,60 @@ body{
             }
         }
     }
-    main{
-        padding-top: -20px;
-        .spider-Form{
-            background-image: url(../Illustration/img5.png);
-            background-repeat: no-repeat;
-            background-color: var(--clr-blue);
-        .content{
-            padding-left: 60%;
-            h1{
+    
+    footer{
+        background-color: var(--clr-black);
+        padding-top:100px;
+        
+        .about{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            .aboutUs{
+                list-style-type: none;
                 text-align: center;
-            }
-            
-            form{
-                margin-left: 10%;
-                
-                display: flex;
-                flex-direction: column;
-                input{
-                    width: 60%;
-                    margin-bottom: 10px;
-                    padding: 5px;
-                    padding-left: 20px;
-                    border-radius: 2rem;
-                    border: none;
-                    border: 2px solid var(--clr-black);
-                }
-                button{
-                    margin-left: 15% ;
+                display: grid;
+                grid-template-columns: 100px 300px 150px 300px repeat(2, 100px);
+                li a{
+                    
                     color: var(--clr-white);
-                    border: 1px solid var(--clr-white);
-                    width: 150px;
-                    padding: 10px;
-                    border-radius: 1em;
+                    &:hover{
+                        font-size: 20px;
+                    }
+                    .footer-brand{
+                        margin-top: -15px;
+                    }
+                }
+
+
+            }
+            #choixDeLangue{
+                margin-left: 20%;
+                width: 200px;
+                background-color: var(--clr-red);
+                border: none;
+                border-radius: 1rem;
+                padding: 0 0 0 10px;
+                margin-bottom: 15px;
+            }
+        }
+        .contact{
+            margin-top: 50px;
+            text-align: center;
+            a{
+                img{
+                    background-color: var(--clr-red);
+                    margin: 10px;
+                    padding: 5px;
+                    border-radius: 50%;
                 }
             }
-            
-            
-            
-        }
 
+        }
+        .copyright{
+            color: var(--clr-white);
+            margin-top: 50px;
+            padding-bottom: 30px;
+            text-align: center;
         }
     }
 }
