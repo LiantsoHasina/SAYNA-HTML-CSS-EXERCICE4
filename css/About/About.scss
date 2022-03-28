@@ -1,0 +1,16 @@
+@import url(../main.css);
+
+body{
+    header{
+        background-color: var(--clr-yellow);
+        .webPhone{
+            display: flex;
+            justify-content: space-between;
+            .toile{
+                align-self: center;
+            }
+
+        }
+
+    }
+}
