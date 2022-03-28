@@ -4,9 +4,9 @@
 // initialisation de font-face
 @font-face {
     font-family: farfromhome;
-    src: url(../Typo-FarFromHomecoming.woff2) format('woff2');
+    src: url(../Font/FarFromHomecoming.woff2) format(woff2);
     font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
 }
 
 *, *::before, *::after{
@@ -16,6 +16,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
+    text-align: justify;
+    text-justify: newspaper;
     color: var(--clr-white);
 
     
@@ -76,7 +78,7 @@ body{
             .nav-menu{
                 text-align: center;
                 display: grid;
-                grid-template-columns: repeat(4,20%);
+                grid-template-columns: repeat(5,20%);
                 list-style-type: none;
                 li{
                     padding-top:30px;
@@ -134,8 +136,8 @@ body{
             }
             .spidermen{
                 padding-top: 100px;
-                display: grid;
                 padding-bottom: 100px;
+                display: grid;
                 grid-template-columns: repeat(3, 1fr);
                     
                     .card{
@@ -163,7 +165,7 @@ body{
                     
                     color: var(--clr-white);
                     &:hover{
-                        font-size: 20px;
+                        transform: translateY(10px);
                     }
                     .footer-brand{
                         margin-top: -15px;

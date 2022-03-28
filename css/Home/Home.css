@@ -1,3 +1,4 @@
+@import url(../main.css);
 main {
   padding-top: -20px;
 }
@@ -20,13 +21,8 @@ main .spider-Form .form-content h1 {
 main .spider-Form .form-content form {
   margin-left: 10%;
   padding-bottom: 90px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 main .spider-Form .form-content form input {
@@ -57,13 +53,8 @@ main .spider-Form .form-content form button:hover {
 
 main .newsletter {
   background-color: var(--clr-red);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 main .newsletter .newsletter-content {
@@ -77,10 +68,8 @@ main .newsletter .newsletter-content h1 {
 main .newsletter .newsletter-content form {
   margin-top: 100px;
   display: block;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 20px;
 }
 
@@ -92,18 +81,6 @@ main .newsletter .newsletter-content form .user-input {
   border: none;
   border: 1px solid var(--clr-white);
   background: none;
-}
-
-main .newsletter .newsletter-content form .user-input::-webkit-input-placeholder {
-  color: var(--clr-white);
-}
-
-main .newsletter .newsletter-content form .user-input:-ms-input-placeholder {
-  color: var(--clr-white);
-}
-
-main .newsletter .newsletter-content form .user-input::-ms-input-placeholder {
-  color: var(--clr-white);
 }
 
 main .newsletter .newsletter-content form .user-input::placeholder {
@@ -126,4 +103,3 @@ main .newsletter .newsletter-content form button {
 main .newsletter img {
   width: 60%;
 }
-/*# sourceMappingURL=Home.css.map */
