@@ -13,4 +13,97 @@ body{
         }
 
     }
+    main{
+        .textYourSpidey{
+            background-color: var(--clr-red);
+            .annonce{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 50px 0 50px 0;
+                .yourMessage{
+                    img{
+                        
+                        width: 500px;
+                    }
+                }
+                form{
+                    padding-bottom: 90px;
+                    display: flex;
+                    flex-direction: column;
+                    input{
+                        width: 60%;
+                        margin-bottom: 10px;
+                        padding: 5px;
+                        padding-left: 20px;
+                        border-radius: 2rem;
+                        border: none;
+                        border: 1px solid var(--clr-white);
+                        background: none;
+                        &::placeholder{
+                            color: var(--clr-white);
+                        }
+                        
+                    }
+                    #message{
+                        height: 100px;
+                    }
+                    button{
+                        margin:5% 0 0 15% ;
+                        
+                        color: var(--clr-white);
+                        border: 1px solid var(--clr-white);
+                        width: 150px;
+                        padding: 10px;
+                        border-radius: 1em;
+                        background: none;
+                        &:hover{
+                            color: var(--clr-blue);
+                            border: 1px solid var(--clr-blue);
+                            background-color: var(--clr-white);
+                        }
+                    }
+                }
+            }
+            
+        }
+        .saynaXmarvel{
+            background-color: var(--clr-blue);
+            h1{
+                padding: 50px 0 50px 10%;
+            }
+            .Xdetails{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+                margin:0 10% 100px 0;
+                &:nth-child(2){
+                    ul{
+                        margin-left: 10%;
+                    }
+                }
+
+            }
+            .retrouveNous{
+                margin-right: 10%;
+                .links{
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    button{
+                        font-weight: 600;
+                        width: 200px;
+                        border-radius: 1rem;
+                        border: none;
+                        margin:50px 0 50px 0;
+    
+                    }
+                }
+                
+            }
+
+
+
+        }
+    }
 }

@@ -19,7 +19,7 @@
             </div>
             <ul class="nav-menu">
                 <li class="sub-title"><a href="Home.html">Accueil</a> </li>
-                <li class="sub-title"><a href="">Adversaires</a> </li>
+                <li class="sub-title"><a href="Foes.html">Adversaires</a> </li>
                 <li class="sub-title"><a href="Héros.html">Héros</a> </li>
                 <li class="sub-title"><a href="about.html">A propos</a></li>
                 <li class="sub-title"><a href="Bonus.html">Bonus</a></li>
@@ -30,11 +30,14 @@
             <h1 id="spiderman">
                 spiderman
             </h1>
+            <!-- <h2 class="d-block d-md-none">
+                L'arraignée sympa du quartier !
+            </h2> -->
             <div class="redirectMe">
                 <button type="button" class="btn btn-default voir1 py-3">Voir les Héros</button>
                 <button type="button" class="btn btn-default voir2 py-3">Voir les Adversaires</button>
             </div>
-            <h2>
+            <h2 class="d-none d-md-block">
                 L'arraignée sympa du quartier !
             </h2>
             <p>
@@ -151,6 +154,11 @@
 
     </main>
     <footer>
+        <div class="spideyTheme">
+            <audio controls="" autoplay loop preload="auto">
+                <source src="audios/audio1.mp3" type="audio/mp3">
+            </audio>
+        </div>
         <div class="spacing about">
             <ul class="aboutUs">
                 <li><a href="">
@@ -159,6 +167,7 @@
                 <li><a href="">Politique de confidentialité</a></li>
                 <li><a href="">Cookies</a></li>
                 <li><a href="">
+                    <!-- convert to css, other file may not have bootstrap link -->
                     <div class="footer-brand d-none d-sm-block">
                         <img src="Logo/logo1.png" alt="Sayna">
                         <img src="Logo/logo2.png" alt="Crossover">

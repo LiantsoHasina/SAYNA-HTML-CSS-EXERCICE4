@@ -3,28 +3,35 @@ main{
     padding-top: -20px;
     .spider-Form{
         padding-top:50px ;
-        background-image: url(../../Illustration/img5.png);
-        background-repeat: no-repeat;
-        background-color: var(--clr-blue);
+        background: {
+            image: url(../../Illustration/img5.png);
+            repeat: no-repeat;
+            color: var(--clr-blue);
+        }
     .form-content{
         padding-left: 60%;
+        
         h1{
             text-align: center;
+            margin-bottom: 20px;
         }
-        
+        p{
+            margin-bottom: 20px;
+        }
         form{
             margin-left: 10%;
             padding-bottom: 90px;
             display: flex;
             flex-direction: column;
             input{
-                width: 60%;
+                width: 70%;
                 margin-bottom: 10px;
                 padding: 5px;
                 padding-left: 20px;
                 border-radius: 2rem;
                 border: none;
                 border: 2px solid var(--clr-black);
+                margin-bottom: 20px;
             }
             button{
                 margin:5% 0 0 15% ;
@@ -51,8 +58,8 @@ main{
     }
     .newsletter{
         background-color: var(--clr-red);
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         
         .newsletter-content{
             margin-top: 5%;
@@ -60,7 +67,7 @@ main{
                 margin-bottom: 10px;
             }
             form{
-                margin-top: 100px;
+                margin-top: 50px;
                 display: block;
                 display: grid;
                 grid-template-rows: repeat(2, 1fr);
@@ -88,7 +95,7 @@ main{
                     width: 250px;
                     border-radius: 1rem;
                     background-color: var(--clr-white);
-                    margin:70px 0 0 10%;
+                    margin:40px 0 0 10%;
 
                 }
             }
@@ -96,8 +103,10 @@ main{
 
         } 
         img{
-            width: 60%;
+            width: 100%;
+            height: 100%;
         }
     }
+    
 
 }

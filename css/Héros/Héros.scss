@@ -7,10 +7,11 @@ body{
             background-color: var(--clr-blue);
         }
         .quotes{
-            background-image: url(../../Illustration/img19.png);
-
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: {
+                image: url(../../Illustration/img19.png);
+                repeat: no-repeat;
+                size: cover;
+            }
             h1{
                 padding-top:400px;        
             }
@@ -21,23 +22,29 @@ body{
         }
     }
     main{
+        .valeursTitre{
+            margin: 10% 0 20px 0;
+            line-height: 30px;
+        }
         .valeurs{
-            margin: 10% 0 10% 0;
+            margin-bottom: 10%;
             
             padding-right: 10%;
-            display:flex;
-            flex-direction: row;
-            gap:100px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap:50px;
             .video{
-                margin-top: 10%;
+                align-self: center;
             }
         }
         .hisPowers{
 
             .title1{
-                background-image: url(../../Illustration/img20.png);
-                background-repeat: no-repeat;
-                background-size: cover;
+                background: {
+                    image: url(../../Illustration/img20.png);
+                    repeat: no-repeat;
+                    size: cover;
+                }
                 padding: 5% 0 500px 10% ;
             }
             .list{
@@ -97,26 +104,39 @@ body{
                             padding: 40px 0 40px 0;
                             width: 100%;
                         }
-                        .bord{
-                            border: 1px solid white;
+                        img{
+                            width: 200px;
+                        }
+                        #Thor, #Clint{
+                            justify-self: end;
                         }
                         .theTeam{
                             display: grid;
-                            grid-template-columns: 50% 50%;
+                            gap: 1.5rem;
+                            grid-template-columns: 1fr 1fr;
+                            .details3{
+                                width: 250px;
+                                grid-row: span 2;
+                            }
                             
                         }
                     }
                     .Assemble{
+                        
 
                     }
                 }
             }
         }
         .multiverse{
-            background-image: url(../../Illustration/img33.png);
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: {
+                image: url(../../Illustration/img33.png);
+                repeat: no-repeat;
+                size: cover;
+            }
             .conceptDetails{
+                display: grid;
+                grid-template-columns: 1fr;
                 background-color: var(--clr-blue);
                 opacity: 60%;
                 width: 40%;
@@ -124,7 +144,8 @@ body{
                 padding: 50px 0 100px 0;
                 text-align: center;
                 h3{
-                   margin-left: 40%; 
+                   justify-self: end;
+                   margin-bottom: 20px;
                 }
                 *{
                     margin-left: 5%;

@@ -21,21 +21,21 @@ body header .quotes h3 {
   padding-bottom: 50px;
 }
 
+body main .valeursTitre {
+  margin: 10% 0 20px 0;
+  line-height: 30px;
+}
+
 body main .valeurs {
-  margin: 10% 0 10% 0;
+  margin-bottom: 10%;
   padding-right: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 100px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
 }
 
 body main .valeurs .video {
-  margin-top: 10%;
+  align-self: center;
 }
 
 body main .hisPowers .title1 {
@@ -48,21 +48,16 @@ body main .hisPowers .title1 {
 body main .hisPowers .list {
   margin-top: 5%;
   padding-right: 10%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 40px;
 }
 
 body main .hisPowers .sidekicks .bestFriends {
   margin-bottom: 100px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 body main .hisPowers .sidekicks .bestFriends .pics1 {
@@ -85,26 +80,17 @@ body main .hisPowers .sidekicks .bestFriends .details1 {
 }
 
 body main .hisPowers .sidekicks .loveInterest {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 100px;
 }
 
 body main .hisPowers .sidekicks .loveInterest .pics2 {
   margin-right: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 body main .hisPowers .sidekicks .loveInterest .pics2 img {
@@ -113,10 +99,8 @@ body main .hisPowers .sidekicks .loveInterest .pics2 img {
 
 body main .hisPowers .sidekicks .avengers {
   background-color: var(--clr-red);
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 20px;
 }
 
@@ -125,15 +109,23 @@ body main .hisPowers .sidekicks .avengers .avengersMembers h1 {
   width: 100%;
 }
 
-body main .hisPowers .sidekicks .avengers .avengersMembers .bord {
-  border: 1px solid white;
+body main .hisPowers .sidekicks .avengers .avengersMembers img {
+  width: 200px;
+}
+
+body main .hisPowers .sidekicks .avengers .avengersMembers #Thor, body main .hisPowers .sidekicks .avengers .avengersMembers #Clint {
+  justify-self: end;
 }
 
 body main .hisPowers .sidekicks .avengers .avengersMembers .theTeam {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+body main .hisPowers .sidekicks .avengers .avengersMembers .theTeam .details3 {
+  width: 250px;
+  grid-row: span 2;
 }
 
 body main .multiverse {
@@ -143,6 +135,8 @@ body main .multiverse {
 }
 
 body main .multiverse .conceptDetails {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: var(--clr-blue);
   opacity: 60%;
   width: 40%;
@@ -152,7 +146,8 @@ body main .multiverse .conceptDetails {
 }
 
 body main .multiverse .conceptDetails h3 {
-  margin-left: 40%;
+  justify-self: end;
+  margin-bottom: 20px;
 }
 
 body main .multiverse .conceptDetails * {
@@ -167,4 +162,3 @@ body footer .about #choixDeLangue {
 body footer .contact a img {
   background-color: var(--clr-blue);
 }
-/*# sourceMappingURL=Héros.css.map */

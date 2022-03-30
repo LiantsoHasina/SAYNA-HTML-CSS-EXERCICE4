@@ -1,0 +1,68 @@
+@import url(../main.css);
+body header {
+  background-image: url(../../Illustration/img7.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body header nav {
+  background-color: var(--clr-yellow);
+}
+
+body header .villainsTitle {
+  padding: 400px 0 5% 10%;
+}
+
+body main {
+  background-color: var(--clr-yellow);
+  padding-bottom: 100px;
+  padding-right: 10%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+body main .cardVillains {
+  width: 285px;
+}
+
+body main .cardVillains img {
+  width: 285px;
+  margin-bottom: -20px;
+}
+
+body main .cardVillains figcaption {
+  padding: 20px;
+  border: 10px solid var(--clr-black);
+  border-bottom-left-radius: 50px 30px;
+  border-bottom-right-radius: 50px 30px;
+}
+
+body main .cardVillains figcaption * {
+  color: var(--clr-black);
+}
+
+body main .cardVillains figcaption h3, body main .cardVillains figcaption p {
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+body main .cardVillains figcaption h3 {
+  text-align: center;
+  margin: 20px 0 20px;
+}
+
+body main #vulture, body main #Mysterio {
+  margin-left: 100%;
+}
+
+body footer .about #choixDeLangue {
+  background-color: var(--clr-yellow);
+}
+
+body footer .contact a img {
+  background-color: var(--clr-yellow);
+}

@@ -22,7 +22,13 @@
 
     
 
+
 }
+// Variables
+$medium:768px;
+$large:1300px;
+
+
 a{
     text-decoration: none;
 }
@@ -60,15 +66,14 @@ body{
         
         
         nav{
-            
-            padding-right: 10%;
             background-color:var(--clr-red);
             display: grid;
-            grid-template-columns: .5fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            padding-right: 10%;
             .brand{
                 padding: 10px 0 10px 0;
                 img{
-                    padding: 0 20px 0 5px;
+                    padding: 0 5px 0 5px;
                     &:nth-child(2){
                         margin-bottom: 10px;
                     }
@@ -77,15 +82,18 @@ body{
             }
             .nav-menu{
                 text-align: center;
+                justify-self: stretch;
                 display: grid;
-                grid-template-columns: repeat(5,20%);
+                grid-template-columns: repeat(5,1fr);
                 list-style-type: none;
+                
                 li{
                     padding-top:30px;
                     a{
                         color: #FFFFFF;
                         &:hover{
                             font-size: 20px;
+                            
                         }
                     }
                 }
@@ -94,14 +102,20 @@ body{
             
         }
         .explore{
-            background-image: url(../Illustration/img1.png);
-            background-repeat: no-repeat;
-            background-size: 100%;
+            background: {
+                image: url(../Illustration/img1.png);
+                repeat: no-repeat;
+                size: 100%;
+            }
+            
             padding-top: 20%;
             background-color: #B11313;
             #spiderman{
                 text-transform: uppercase;
                 margin-bottom: 100px;
+                
+
+
             }
             h2{
                 margin: 10% 0 10% ;
@@ -143,6 +157,7 @@ body{
                     .card{
                         background:none;
                     }
+                
 
                 
             }
@@ -151,16 +166,26 @@ body{
     
     footer{
         background-color: var(--clr-black);
-        padding-top:100px;
+        padding-top:20px;
+        .spideyTheme{
+            background-color: var(--clr-black);
+            margin-bottom: 50px;
+            text-align: center;
+            audio{
+                height: 30px;
+            }
+        }
         
         .about{
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: 2fr 1fr;
+            // grid-template-columns: 2fr 1fr;
             .aboutUs{
                 list-style-type: none;
                 text-align: center;
                 display: grid;
-                grid-template-columns: 100px 300px 150px 300px repeat(2, 100px);
+                grid-template-columns: 100px 250px 100px 300px repeat(2, 100px);
+                justify-items: center;
                 li a{
                     
                     color: var(--clr-white);
@@ -204,4 +229,9 @@ body{
             text-align: center;
         }
     }
+}
+@media  (max-width: $medium) {
+    *{
+        text-align: center;
+    }                   
 }
