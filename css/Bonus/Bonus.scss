@@ -20,3 +20,10 @@ body{
         }
     }
 }
+@media  (max-width: 768px){
+    body header nav .nav-dropdown .nav-menu{
+        background-color: rgba(#000,.5);
+    }
+
+
+}

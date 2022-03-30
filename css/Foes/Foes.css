@@ -17,11 +17,15 @@ body main {
   background-color: var(--clr-yellow);
   padding-bottom: 100px;
   padding-right: 10%;
+  display: -ms-grid;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 50px;
 }
 
@@ -66,3 +70,10 @@ body footer .about #choixDeLangue {
 body footer .contact a img {
   background-color: var(--clr-yellow);
 }
+
+@media (max-width: 768px) {
+  body header nav .nav-dropdown .nav-menu {
+    background-color: var(--clr-yellow);
+  }
+}
+/*# sourceMappingURL=Foes.css.map */

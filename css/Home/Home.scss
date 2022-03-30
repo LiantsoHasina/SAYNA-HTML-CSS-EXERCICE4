@@ -1,4 +1,4 @@
-@import url(../main.css);
+@import url(../main.css);;
 main{
     padding-top: -20px;
     .spider-Form{
@@ -109,4 +109,16 @@ main{
     }
     
 
+}
+@media  (max-width: 768px) {
+    // *{
+    //     
+    // }                   
+    body{
+        header{
+            nav{
+                opacity: 100%;
+            }
+        }
+    }
 }

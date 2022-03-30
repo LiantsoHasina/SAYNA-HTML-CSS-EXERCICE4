@@ -12,4 +12,10 @@ body main .cliffhanger {
   top: 80%;
   padding-left: 10%;
 }
+
+@media (max-width: 768px) {
+  body header nav .nav-dropdown .nav-menu {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
 /*# sourceMappingURL=Bonus.css.map */

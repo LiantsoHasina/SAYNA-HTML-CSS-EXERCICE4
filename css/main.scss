@@ -1,6 +1,7 @@
 // Monserrat link
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:ital,wght@0,400;1,300&display=swap');
 
+
 // initialisation de font-face
 @font-face {
     font-family: farfromhome;
@@ -24,10 +25,6 @@
 
 
 }
-// Variables
-$medium:768px;
-$large:1300px;
-
 
 a{
     text-decoration: none;
@@ -69,35 +66,55 @@ body{
             background-color:var(--clr-red);
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 2rem;
             padding-right: 10%;
             .brand{
-                padding: 10px 0 10px 0;
-                img{
-                    padding: 0 5px 0 5px;
-                    &:nth-child(2){
-                        margin-bottom: 10px;
+
+                a{
+                    padding: 10px 0 10px 0;
+                    margin: auto;
+
+                    img{
+                        padding: 0 5px 0 5px;
+
+                        // &:first-child{
+                        //     width: 10%;
+                        // }
+                        &:nth-child(2){
+                            
+                            margin-bottom: 10px;
+                        }
+                        // &:last-child{
+                        //     width: 30%;
+                        // }
                     }
+
                 }
                 
-            }
-            .nav-menu{
-                text-align: center;
-                justify-self: stretch;
-                display: grid;
-                grid-template-columns: repeat(5,1fr);
-                list-style-type: none;
                 
-                li{
-                    padding-top:30px;
-                    a{
-                        color: #FFFFFF;
-                        &:hover{
-                            font-size: 20px;
-                            
+            }
+            .nav-dropdown{
+                .nav-menu{
+                    text-align: center;
+                    justify-self: stretch;
+                    display: grid;
+                    grid-template-columns: repeat(5,1fr);
+                    list-style-type: none;
+                    
+                    li{
+                        padding-top:30px;
+                        a{
+                            color: #FFFFFF;
+                            &:hover{
+                                font-size: 20px;
+                                
+                            }
                         }
                     }
                 }
+
             }
+            
 
             
         }
@@ -182,11 +199,13 @@ body{
             // grid-template-columns: 2fr 1fr;
             .aboutUs{
                 list-style-type: none;
-                text-align: center;
+                
                 display: grid;
                 grid-template-columns: 100px 250px 100px 300px repeat(2, 100px);
                 justify-items: center;
+                
                 li a{
+                    // text-align: center;
                     
                     color: var(--clr-white);
                     &:hover{
@@ -230,8 +249,66 @@ body{
         }
     }
 }
-@media  (max-width: $medium) {
-    *{
-        text-align: center;
-    }                   
+@media  (max-width: 768px) {                  
+    body{
+        header{
+            position: relative;
+            nav{
+                padding-right: 0;
+                grid-template-columns: 1fr 1fr;
+                position: absolute;
+                background-color: transparent;
+                .brand{
+                    a img{
+                            &:first-child{
+                                width: 20%;
+                            }
+                            &:nth-child(2){
+                                width: 20px;
+                                margin-bottom: 0px;
+                            }
+                            &:last-child{
+                                width: 60%;
+                            }
+                    }
+                }
+                .nav-dropdown{
+                    
+                    position: relative;
+                    justify-self: end;
+                    .ellipse{
+                        font-weight: bolder;
+                        font-size: 2rem;
+                        letter-spacing: 5px;
+                        color: var(--clr-white); 
+                         
+                    }
+                    
+                    .nav-menu{
+                        display: none;
+                        position: absolute;
+                        grid-template-columns:290px;
+                        top: 50px;
+                        right: 0px;
+                        width: 200px;
+                        background-color: var(--clr-red);
+                        border-radius: .5rem;
+                        box-shadow: 0 5px 15px var(--clr-black);
+                        li{
+                            &:last-child{
+                                padding-bottom: 10px;
+                            }
+                        }
+                        
+                    }
+                    &:hover{
+                        .nav-menu{
+                            display: block;
+                        }
+                    } 
+                }
+            }
+            
+        }
+    }
 }

@@ -52,22 +52,24 @@ body header nav {
   background-color: var(--clr-red);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   padding-right: 10%;
 }
 
-body header nav .brand {
+body header nav .brand a {
   padding: 10px 0 10px 0;
+  margin: auto;
 }
 
-body header nav .brand img {
+body header nav .brand a img {
   padding: 0 5px 0 5px;
 }
 
-body header nav .brand img:nth-child(2) {
+body header nav .brand a img:nth-child(2) {
   margin-bottom: 10px;
 }
 
-body header nav .nav-menu {
+body header nav .nav-dropdown .nav-menu {
   text-align: center;
   justify-self: stretch;
   display: grid;
@@ -75,15 +77,15 @@ body header nav .nav-menu {
   list-style-type: none;
 }
 
-body header nav .nav-menu li {
+body header nav .nav-dropdown .nav-menu li {
   padding-top: 30px;
 }
 
-body header nav .nav-menu li a {
+body header nav .nav-dropdown .nav-menu li a {
   color: #FFFFFF;
 }
 
-body header nav .nav-menu li a:hover {
+body header nav .nav-dropdown .nav-menu li a:hover {
   font-size: 20px;
 }
 
@@ -166,7 +168,6 @@ body footer .about {
 
 body footer .about .aboutUs {
   list-style-type: none;
-  text-align: center;
   display: grid;
   grid-template-columns: 100px 250px 100px 300px repeat(2, 100px);
   justify-items: center;
@@ -214,7 +215,50 @@ body footer .copyright {
 }
 
 @media (max-width: 768px) {
-  * {
-    text-align: center;
+  body header {
+    position: relative;
+  }
+  body header nav {
+    padding-right: 0;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    background-color: transparent;
+  }
+  body header nav .brand a img:first-child {
+    width: 20%;
+  }
+  body header nav .brand a img:nth-child(2) {
+    width: 20px;
+    margin-bottom: 0px;
+  }
+  body header nav .brand a img:last-child {
+    width: 60%;
+  }
+  body header nav .nav-dropdown {
+    position: relative;
+    justify-self: end;
+  }
+  body header nav .nav-dropdown .ellipse {
+    font-weight: bolder;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    color: var(--clr-white);
+  }
+  body header nav .nav-dropdown .nav-menu {
+    display: none;
+    position: absolute;
+    grid-template-columns: 290px;
+    top: 50px;
+    right: 0px;
+    width: 200px;
+    background-color: var(--clr-red);
+    border-radius: .5rem;
+    box-shadow: 0 5px 15px var(--clr-black);
+  }
+  body header nav .nav-dropdown .nav-menu li:last-child {
+    padding-bottom: 10px;
+  }
+  body header nav .nav-dropdown:hover .nav-menu {
+    display: block;
   }
 }
