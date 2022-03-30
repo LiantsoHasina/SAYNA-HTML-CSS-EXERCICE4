@@ -105,10 +105,11 @@ body{
                         padding-top:30px;
                         a{
                             color: #FFFFFF;
-                            &:hover{
-                                font-size: 20px;
-                                
-                            }
+                            
+                        }
+                        &:hover{
+                            transform: translateY(-5px);
+                            
                         }
                     }
                 }
@@ -126,9 +127,11 @@ body{
             }
             
             padding-top: 20%;
-            background-color: #B11313;
+            background-color: var(--clr-red);
             #spiderman{
-                text-transform: uppercase;
+                h1{
+                    text-transform: uppercase;
+                }
                 margin-bottom: 100px;
                 
 
@@ -170,6 +173,7 @@ body{
                 padding-bottom: 100px;
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
                     
                     .card{
                         background:none;
@@ -204,15 +208,18 @@ body{
                 grid-template-columns: 100px 250px 100px 300px repeat(2, 100px);
                 justify-items: center;
                 
-                li a{
+                li{ 
+                    &:hover{
+                        transform: translateY(-5px);
+                    }
+                    a{
                     // text-align: center;
                     
-                    color: var(--clr-white);
-                    &:hover{
-                        transform: translateY(10px);
-                    }
-                    .footer-brand{
-                        margin-top: -15px;
+                        color: var(--clr-white);
+                        
+                        .footer-brand{
+                            margin-top: -15px;
+                        }
                     }
                 }
 
@@ -251,8 +258,11 @@ body{
 }
 @media  (max-width: 768px) {                  
     body{
+        
         header{
             position: relative;
+
+
             nav{
                 padding-right: 0;
                 grid-template-columns: 1fr 1fr;
@@ -295,6 +305,7 @@ body{
                         border-radius: .5rem;
                         box-shadow: 0 5px 15px var(--clr-black);
                         li{
+                            transform: translateX(-10px);
                             &:last-child{
                                 padding-bottom: 10px;
                             }
@@ -308,7 +319,21 @@ body{
                     } 
                 }
             }
-            
+            .explore{
+
+                .redirectMe{
+                    margin-bottom: 50px;
+                }
+
+                .spidermen{
+                    grid-template-columns: 1fr;
+                    *{
+                        justify-self: center;
+                    }
+                }
+    
+            }
+
         }
     }
 }

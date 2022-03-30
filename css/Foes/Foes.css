@@ -10,7 +10,7 @@ body header nav {
 }
 
 body header .villainsTitle {
-  padding: 400px 0 5% 10%;
+  padding: 20% 0 20% 10%;
 }
 
 body main {
@@ -74,6 +74,22 @@ body footer .contact a img {
 @media (max-width: 768px) {
   body header nav .nav-dropdown .nav-menu {
     background-color: var(--clr-yellow);
+  }
+  body header {
+    position: relative;
+  }
+  body header nav {
+    background-color: transparent;
+  }
+  body header .villainsTitle h3 {
+    font-size: 100%;
+  }
+  body main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body main #vulture, body main #Mysterio {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=Foes.css.map */

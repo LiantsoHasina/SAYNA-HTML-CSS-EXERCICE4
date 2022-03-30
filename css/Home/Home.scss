@@ -9,7 +9,12 @@ main{
             color: var(--clr-blue);
         }
     .form-content{
-        padding-left: 60%;
+        padding-right: 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        *{
+            justify-self: end;
+        }
         
         h1{
             text-align: center;
@@ -24,7 +29,8 @@ main{
             display: flex;
             flex-direction: column;
             input{
-                width: 70%;
+                
+                width: 500px;
                 margin-bottom: 10px;
                 padding: 5px;
                 padding-left: 20px;
@@ -34,7 +40,7 @@ main{
                 margin-bottom: 20px;
             }
             button{
-                margin:5% 0 0 15% ;
+                margin:5% auto ;
                 
                 color: var(--clr-white);
                 border: 1px solid var(--clr-white);
@@ -95,7 +101,7 @@ main{
                     width: 250px;
                     border-radius: 1rem;
                     background-color: var(--clr-white);
-                    margin:40px 0 0 10%;
+                    margin:40px 0 10% 10%;
 
                 }
             }
@@ -111,14 +117,21 @@ main{
 
 }
 @media  (max-width: 768px) {
-    // *{
-    //     
-    // }                   
+             
     body{
-        header{
-            nav{
-                opacity: 100%;
+
+        main{
+            .spider-Form{
+                .form-content{
+                    *{
+                        justify-self: center;
+                    }
+                }
             }
+            .newsletter{
+                
+            }
+
         }
     }
 }

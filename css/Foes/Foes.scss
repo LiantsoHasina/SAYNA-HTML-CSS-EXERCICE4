@@ -11,7 +11,7 @@ body{
             size: cover;
         }
         .villainsTitle{
-            padding: 400px 0 5% 10%;
+            padding: 20% 0 20% 10%;
         }
         
     }
@@ -79,6 +79,26 @@ body{
 @media  (max-width: 768px){
     body header nav .nav-dropdown .nav-menu{
         background-color: var(--clr-yellow);
+    }
+    body{
+        header{
+            position: relative;
+            nav{
+                background-color: transparent;
+            }
+            .villainsTitle{
+
+                h3{
+                    font-size: 100%;
+                }
+            }
+        }
+        main{
+            grid-template-columns: 1fr;
+            #vulture, #Mysterio{
+                margin-left: 0 ;
+            }
+        }
     }
 
 

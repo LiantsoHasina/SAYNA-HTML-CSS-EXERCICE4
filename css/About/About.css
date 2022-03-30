@@ -136,8 +136,14 @@ body main .saynaXmarvel .retrouveNous .links button {
   font-weight: 600;
   width: 200px;
   border-radius: 1rem;
-  border: none;
+  border: 2px solid var(--clr-white);
   margin: 50px 0 50px 0;
+  color: var(--clr-white);
+}
+
+body main .saynaXmarvel .retrouveNous .links button:hover {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
 }
 
 @media (max-width: 768px) {

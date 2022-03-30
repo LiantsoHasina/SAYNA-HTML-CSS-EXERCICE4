@@ -9,7 +9,8 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Montserrat';
   text-align: justify;
   text-justify: newspaper;
@@ -41,17 +42,19 @@ h1 {
 }
 
 :root {
-  --clr-red: #B11313;
-  --clr-yellow: #F1C530;
-  --clr-blue: #114C92;
-  --clr-black: #000000;
-  --clr-white: #FFFFFF;
+  --clr-red:#B11313;
+  --clr-yellow:#F1C530;
+  --clr-blue:#114C92;
+  --clr-black:#000000;
+  --clr-white:#FFFFFF;
 }
 
 body header nav {
   background-color: var(--clr-red);
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding-right: 10%;
 }
@@ -71,9 +74,12 @@ body header nav .brand a img:nth-child(2) {
 
 body header nav .nav-dropdown .nav-menu {
   text-align: center;
-  justify-self: stretch;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
   list-style-type: none;
 }
 
@@ -85,8 +91,9 @@ body header nav .nav-dropdown .nav-menu li a {
   color: #FFFFFF;
 }
 
-body header nav .nav-dropdown .nav-menu li a:hover {
-  font-size: 20px;
+body header nav .nav-dropdown .nav-menu li:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 body header .explore {
@@ -94,12 +101,15 @@ body header .explore {
   background-repeat: no-repeat;
   background-size: 100%;
   padding-top: 20%;
-  background-color: #B11313;
+  background-color: var(--clr-red);
 }
 
 body header .explore #spiderman {
-  text-transform: uppercase;
   margin-bottom: 100px;
+}
+
+body header .explore #spiderman h1 {
+  text-transform: uppercase;
 }
 
 body header .explore h2 {
@@ -138,8 +148,11 @@ body header .explore .voir2:hover {
 body header .explore .spidermen {
   padding-top: 100px;
   padding-bottom: 100px;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 body header .explore .spidermen .card {
@@ -162,23 +175,28 @@ body footer .spideyTheme audio {
 }
 
 body footer .about {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
 }
 
 body footer .about .aboutUs {
   list-style-type: none;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 100px 250px 100px 300px repeat(2, 100px);
+  -ms-grid-columns: 100px 250px 100px 300px (100px)[2];
+      grid-template-columns: 100px 250px 100px 300px repeat(2, 100px);
   justify-items: center;
+}
+
+body footer .about .aboutUs li:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 body footer .about .aboutUs li a {
   color: var(--clr-white);
-}
-
-body footer .about .aboutUs li a:hover {
-  transform: translateY(10px);
 }
 
 body footer .about .aboutUs li a .footer-brand {
@@ -220,7 +238,8 @@ body footer .copyright {
   }
   body header nav {
     padding-right: 0;
-    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     position: absolute;
     background-color: transparent;
   }
@@ -236,7 +255,8 @@ body footer .copyright {
   }
   body header nav .nav-dropdown {
     position: relative;
-    justify-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
   body header nav .nav-dropdown .ellipse {
     font-weight: bolder;
@@ -247,13 +267,19 @@ body footer .copyright {
   body header nav .nav-dropdown .nav-menu {
     display: none;
     position: absolute;
-    grid-template-columns: 290px;
+    -ms-grid-columns: 290px;
+        grid-template-columns: 290px;
     top: 50px;
     right: 0px;
     width: 200px;
     background-color: var(--clr-red);
     border-radius: .5rem;
-    box-shadow: 0 5px 15px var(--clr-black);
+    -webkit-box-shadow: 0 5px 15px var(--clr-black);
+            box-shadow: 0 5px 15px var(--clr-black);
+  }
+  body header nav .nav-dropdown .nav-menu li {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
   body header nav .nav-dropdown .nav-menu li:last-child {
     padding-bottom: 10px;
@@ -261,4 +287,16 @@ body footer .copyright {
   body header nav .nav-dropdown:hover .nav-menu {
     display: block;
   }
+  body header .explore .redirectMe {
+    margin-bottom: 50px;
+  }
+  body header .explore .spidermen {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  body header .explore .spidermen * {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
 }
+/*# sourceMappingURL=main.css.map */
