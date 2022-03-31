@@ -4,29 +4,23 @@ body header {
 }
 
 body header .webPhone {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 body header .webPhone .toile {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 body main .textYourSpidey {
   background-color: var(--clr-red);
+  padding-top: 5%;
 }
 
 body main .textYourSpidey .annonce {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   padding: 50px 0 50px 0;
 }
 
@@ -36,17 +30,12 @@ body main .textYourSpidey .annonce .yourMessage img {
 
 body main .textYourSpidey .annonce form {
   padding-bottom: 90px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 body main .textYourSpidey .annonce form input {
-  width: 60%;
+  width: 300px;
   margin-bottom: 10px;
   padding: 5px;
   padding-left: 20px;
@@ -54,18 +43,6 @@ body main .textYourSpidey .annonce form input {
   border: none;
   border: 1px solid var(--clr-white);
   background: none;
-}
-
-body main .textYourSpidey .annonce form input::-webkit-input-placeholder {
-  color: var(--clr-white);
-}
-
-body main .textYourSpidey .annonce form input:-ms-input-placeholder {
-  color: var(--clr-white);
-}
-
-body main .textYourSpidey .annonce form input::-ms-input-placeholder {
-  color: var(--clr-white);
 }
 
 body main .textYourSpidey .annonce form input::placeholder {
@@ -101,10 +78,8 @@ body main .saynaXmarvel h1 {
 }
 
 body main .saynaXmarvel .Xdetails {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin: 0 10% 100px 0;
 }
@@ -118,18 +93,10 @@ body main .saynaXmarvel .retrouveNous {
 }
 
 body main .saynaXmarvel .retrouveNous .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 body main .saynaXmarvel .retrouveNous .links button {
@@ -142,13 +109,66 @@ body main .saynaXmarvel .retrouveNous .links button {
 }
 
 body main .saynaXmarvel .retrouveNous .links button:hover {
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  transform: translateX(20px);
 }
 
 @media (max-width: 768px) {
   body header nav .nav-dropdown .nav-menu {
     background-color: var(--clr-yellow);
   }
+  body main .textYourSpidey h1, body main .textYourSpidey p, body main .textYourSpidey .annonce .yourMessage {
+    text-align: center;
+  }
+  body main .textYourSpidey .annonce {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  body main .textYourSpidey .annonce .yourMessage img {
+    width: 300px;
+  }
+  body main .textYourSpidey .annonce form {
+    justify-self: center;
+  }
+  body main .textYourSpidey .annonce form input {
+    width: 500px;
+  }
+  body main .textYourSpidey .annonce form button {
+    margin: 5% auto;
+  }
+  body main .saynaXmarvel * {
+    text-align: center;
+  }
+  body main .saynaXmarvel .Xdetails {
+    grid-template-columns: 1fr;
+    grid-template-areas: "a"  "b" "c"   "d";
+  }
+  body main .saynaXmarvel .Xdetails .part1 {
+    grid-area: a;
+  }
+  body main .saynaXmarvel .Xdetails .part2 {
+    grid-area: c;
+  }
+  body main .saynaXmarvel .Xdetails .part2 ul {
+    margin-left: 40%;
+  }
+  body main .saynaXmarvel .Xdetails .part2 ul li {
+    text-align: justify;
+  }
+  body main .saynaXmarvel .Xdetails .part3 {
+    grid-area: b;
+  }
+  body main .saynaXmarvel .Xdetails .part4 {
+    grid-area: d;
+  }
+  body main .saynaXmarvel .retrouveNous h3 {
+    display: none;
+  }
+  body main .saynaXmarvel .retrouveNous .links button {
+    font-weight: 100;
+    height: 70px;
+    margin: 10px 0 30px 0;
+  }
+  body main .saynaXmarvel .retrouveNous .links button:hover {
+    transform: translateY(-20px);
+  }
 }
-/*# sourceMappingURL=About.css.map */

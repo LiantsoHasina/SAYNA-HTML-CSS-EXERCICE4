@@ -30,7 +30,7 @@
                     <li class="sub-title"><a href="Foes.html">Adversaires</a> </li>
                     <li class="sub-title"><a href="Héros.html">Héros</a> </li>
                     <li class="sub-title"><a href="about.html">A propos</a></li>
-                    <li class="sub-title"><a href="Bonus.html">Bonus</a></li>
+                    
                 </ul>
             </div>
             
@@ -143,6 +143,11 @@
        </div>
     </main>
     <footer>
+        <div class="spideyTheme">
+            <audio controls="" autoplay loop preload="auto">
+                <source src="audios/audio1.mp3" type="audio/mp3">
+            </audio>
+        </div>
         <div class="spacing about">
             <ul class="aboutUs">
                 <li><a href="">
@@ -150,11 +155,16 @@
                 </a></li>
                 <li><a href="">Politique de confidentialité</a></li>
                 <li><a href="">Cookies</a></li>
-                <li><a href="">
-                    <div class="footer-brand d-none d-sm-block">
-                        <img src="Logo/logo1.png" alt="Sayna">
-                        <img src="Logo/logo2.png" alt="Crossover">
-                        <img src="Logo/logo3.png" alt="Marvel">
+                <li><a href="Bonus.html">
+                    <!-- convert to css, other file may not have bootstrap link -->
+                    <div title="Prochainement"  class="footer-brand d-none d-sm-block">
+                        
+                            <img src="Logo/logo1.png" alt="Sayna">
+                            <img src="Logo/logo2.png" alt="Crossover">
+                            <img src="Logo/logo3.png" alt="Marvel">
+
+                        
+                        
         
                     </div>
                 </a></li>
@@ -165,13 +175,22 @@
                     Blog
                 </a></li>
             </ul>
-            <select name="Langue" class="d-block" id="choixDeLangue">
+            <select name="Langue" id="choixDeLangue">
                 <option value="" disabled selected hidden>Langue</option>
                 <option value="Français">Français</option>
                 <option value="English">English</option>
                 <option value="Russia">Russia</option>
                 <option value="Allemand">Allemand</option>
             </select>
+        </div>
+        <div title="Prochainement" class="footer-hidden-brand d-block d-md-none">
+            <a href="Bonus.html">
+                <img src="Logo/logo1.png" alt="Sayna">
+                <img src="Logo/logo2.png" alt="Crossover">
+                <img src="Logo/logo3.png" alt="Marvel">
+
+            </a>
+
         </div>
         <div class="contact">
            <a href=""><img src="Logo/logof.png" alt="facebook"></a> 

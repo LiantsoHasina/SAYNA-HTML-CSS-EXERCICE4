@@ -100,6 +100,7 @@ body{
                     display: grid;
                     grid-template-columns: repeat(5,1fr);
                     list-style-type: none;
+                    gap: 5px;
                     
                     li{
                         padding-top:30px;
@@ -177,8 +178,17 @@ body{
                     
                     .card{
                         background:none;
+                        
                     }
-                
+                @media (max-width: 1242px) {
+                    grid-template-columns: repeat(2, 1fr);
+                    .card{
+                        &:last-child{
+                            margin-left: 50%;
+                        }
+                    }
+                    
+                }
 
                 
             }
@@ -188,6 +198,7 @@ body{
     footer{
         background-color: var(--clr-black);
         padding-top:20px;
+        width: 100%;
         .spideyTheme{
             background-color: var(--clr-black);
             margin-bottom: 50px;
@@ -200,13 +211,14 @@ body{
         .about{
             display: grid;
             grid-template-columns: 2fr 1fr;
-            // grid-template-columns: 2fr 1fr;
+            gap: 50px;
             .aboutUs{
                 list-style-type: none;
                 
                 display: grid;
-                grid-template-columns: 100px 250px 100px 300px repeat(2, 100px);
+                grid-template-columns: 100px 250px 100px 150px repeat(2, 70px);
                 justify-items: center;
+                gap: .5rem;
                 
                 li{ 
                     &:hover{
@@ -218,7 +230,18 @@ body{
                         color: var(--clr-white);
                         
                         .footer-brand{
-                            margin-top: -15px;
+                            img{
+                                &:first-child{
+                                    width: 10%;
+                                }
+                                &:nth-child(2){
+                                    width: 10px;
+                                }
+                                &:last-child{
+                                    width: 40%;
+                                }
+
+                            }
                         }
                     }
                 }
@@ -226,14 +249,20 @@ body{
 
             }
             #choixDeLangue{
-                margin-left: 20%;
-                width: 200px;
+                // margin-left: 20%;
+                width: 170px;
+                height: 30px;
                 background-color: var(--clr-red);
                 border: none;
-                border-radius: 1rem;
+                border-radius: 16px;
                 padding: 0 0 0 10px;
-                margin-bottom: 15px;
+                margin: 0 10% 15px 0;
+                justify-self: end;
             }
+        }
+        .footer-hidden-brand{
+            text-align: center;
+            display: none;
         }
         .contact{
             margin-top: 50px;
@@ -250,12 +279,32 @@ body{
         }
         .copyright{
             color: var(--clr-white);
-            margin-top: 50px;
+            margin-top: 20px;
             padding-bottom: 30px;
             text-align: center;
         }
+        @media (max-width: 1150px) {
+            .about{
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+                .aboutUs{
+                    
+                    grid-template-columns: 1fr;
+                    justify-items: start;
+
+                }
+                #choixDeLangue{
+                    align-self: center;
+                    justify-self: end;
+                    margin-bottom: 80px;
+                }
+            }
+        }
     }
 }
+
+// @Media
+
 @media  (max-width: 768px) {                  
     body{
         
@@ -330,10 +379,32 @@ body{
                     *{
                         justify-self: center;
                     }
+                    .card{
+                        &:last-child{
+                            margin-left: 0;
+                        }
+                    }
                 }
     
             }
 
         }
+        footer {
+            .about {
+                .aboutUs li{
+                    &:nth-child(4){
+                        display: none;
+                    }
+                }
+                
+
+            }
+            .footer-hidden-brand{
+                display: block;
+            } 
+
+        } 
+            
+        
     }
 }

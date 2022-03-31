@@ -3,6 +3,7 @@
 body{
     header{
         background-color: var(--clr-yellow);
+        
         .webPhone{
             display: flex;
             justify-content: space-between;
@@ -16,9 +17,11 @@ body{
     main{
         .textYourSpidey{
             background-color: var(--clr-red);
+            padding-top: 5%;
             .annonce{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                gap: 20px;
                 padding: 50px 0 50px 0;
                 .yourMessage{
                     img{
@@ -28,10 +31,12 @@ body{
                 }
                 form{
                     padding-bottom: 90px;
-                    display: flex;
-                    flex-direction: column;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    
+                    
                     input{
-                        width: 60%;
+                        width: 300px;
                         margin-bottom: 10px;
                         padding: 5px;
                         padding-left: 20px;
@@ -119,5 +124,87 @@ body{
         background-color: var(--clr-yellow);
     }
 
+    body{
+        main{
+            .textYourSpidey{
+                h1, p, .annonce .yourMessage{
+                    text-align: center;
+                }
+                .annonce{
+
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                    .yourMessage{
+                        img{
+                            
+                            width: 300px;
+                        }
+                    }
+                    form{
+                        justify-self: center;
+                        input{
+                            width: 500px;
+                        }
+                        button{
+                            margin: 5% auto;
+                        }
+                    }
+                }
+            }
+            .saynaXmarvel{
+                *{
+                    text-align: center;
+                }
+                .Xdetails{
+                    // On re-ordonne l'ordre d'affichage
+                    grid-template-columns: 1fr;
+                    grid-template-areas: 
+                    "a" 
+                    "b"
+                    "c"  
+                    "d";
+                     .part1{
+                         grid-area: a;
+                     }
+                     .part2{
+                         grid-area: c;
+                         ul{
+                             margin-left: 40%;
+                             li{
+                                 text-align: justify;
+                                 
+
+                                 
+                             }
+                         }
+
+                     }
+                     .part3{
+                         grid-area: b;
+                     }
+                     .part4{
+                         grid-area: d;
+                     }
+                }
+                .retrouveNous{
+                    h3{
+                        display: none;
+                    }
+                    .links{
+                        button{
+                            font-weight: 100;
+                            height: 70px;
+                            margin: 10px 0 30px 0;
+                            &:hover{
+                            
+                                transform: translateY(-20px);
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
 
 }

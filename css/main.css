@@ -9,8 +9,7 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: 'Montserrat';
   text-align: justify;
   text-justify: newspaper;
@@ -42,19 +41,17 @@ h1 {
 }
 
 :root {
-  --clr-red:#B11313;
-  --clr-yellow:#F1C530;
-  --clr-blue:#114C92;
-  --clr-black:#000000;
-  --clr-white:#FFFFFF;
+  --clr-red: #B11313;
+  --clr-yellow: #F1C530;
+  --clr-blue: #114C92;
+  --clr-black: #000000;
+  --clr-white: #FFFFFF;
 }
 
 body header nav {
   background-color: var(--clr-red);
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding-right: 10%;
 }
@@ -74,13 +71,11 @@ body header nav .brand a img:nth-child(2) {
 
 body header nav .nav-dropdown .nav-menu {
   text-align: center;
-  -ms-grid-column-align: stretch;
-      justify-self: stretch;
-  display: -ms-grid;
+  justify-self: stretch;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   list-style-type: none;
+  gap: 5px;
 }
 
 body header nav .nav-dropdown .nav-menu li {
@@ -92,8 +87,7 @@ body header nav .nav-dropdown .nav-menu li a {
 }
 
 body header nav .nav-dropdown .nav-menu li:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 body header .explore {
@@ -148,10 +142,8 @@ body header .explore .voir2:hover {
 body header .explore .spidermen {
   padding-top: 100px;
   padding-bottom: 100px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -159,9 +151,19 @@ body header .explore .spidermen .card {
   background: none;
 }
 
+@media (max-width: 1242px) {
+  body header .explore .spidermen {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body header .explore .spidermen .card:last-child {
+    margin-left: 50%;
+  }
+}
+
 body footer {
   background-color: var(--clr-black);
   padding-top: 20px;
+  width: 100%;
 }
 
 body footer .spideyTheme {
@@ -175,42 +177,53 @@ body footer .spideyTheme audio {
 }
 
 body footer .about {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
 }
 
 body footer .about .aboutUs {
   list-style-type: none;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px 250px 100px 300px (100px)[2];
-      grid-template-columns: 100px 250px 100px 300px repeat(2, 100px);
+  grid-template-columns: 100px 250px 100px 150px repeat(2, 70px);
   justify-items: center;
+  gap: .5rem;
 }
 
 body footer .about .aboutUs li:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 body footer .about .aboutUs li a {
   color: var(--clr-white);
 }
 
-body footer .about .aboutUs li a .footer-brand {
-  margin-top: -15px;
+body footer .about .aboutUs li a .footer-brand img:first-child {
+  width: 10%;
+}
+
+body footer .about .aboutUs li a .footer-brand img:nth-child(2) {
+  width: 10px;
+}
+
+body footer .about .aboutUs li a .footer-brand img:last-child {
+  width: 40%;
 }
 
 body footer .about #choixDeLangue {
-  margin-left: 20%;
-  width: 200px;
+  width: 170px;
+  height: 30px;
   background-color: var(--clr-red);
   border: none;
-  border-radius: 1rem;
+  border-radius: 16px;
   padding: 0 0 0 10px;
-  margin-bottom: 15px;
+  margin: 0 10% 15px 0;
+  justify-self: end;
+}
+
+body footer .footer-hidden-brand {
+  text-align: center;
+  display: none;
 }
 
 body footer .contact {
@@ -227,9 +240,25 @@ body footer .contact a img {
 
 body footer .copyright {
   color: var(--clr-white);
-  margin-top: 50px;
+  margin-top: 20px;
   padding-bottom: 30px;
   text-align: center;
+}
+
+@media (max-width: 1150px) {
+  body footer .about {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  body footer .about .aboutUs {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+  body footer .about #choixDeLangue {
+    align-self: center;
+    justify-self: end;
+    margin-bottom: 80px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -238,8 +267,7 @@ body footer .copyright {
   }
   body header nav {
     padding-right: 0;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     position: absolute;
     background-color: transparent;
   }
@@ -255,8 +283,7 @@ body footer .copyright {
   }
   body header nav .nav-dropdown {
     position: relative;
-    -ms-grid-column-align: end;
-        justify-self: end;
+    justify-self: end;
   }
   body header nav .nav-dropdown .ellipse {
     font-weight: bolder;
@@ -267,19 +294,16 @@ body footer .copyright {
   body header nav .nav-dropdown .nav-menu {
     display: none;
     position: absolute;
-    -ms-grid-columns: 290px;
-        grid-template-columns: 290px;
+    grid-template-columns: 290px;
     top: 50px;
     right: 0px;
     width: 200px;
     background-color: var(--clr-red);
     border-radius: .5rem;
-    -webkit-box-shadow: 0 5px 15px var(--clr-black);
-            box-shadow: 0 5px 15px var(--clr-black);
+    box-shadow: 0 5px 15px var(--clr-black);
   }
   body header nav .nav-dropdown .nav-menu li {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
+    transform: translateX(-10px);
   }
   body header nav .nav-dropdown .nav-menu li:last-child {
     padding-bottom: 10px;
@@ -291,12 +315,18 @@ body footer .copyright {
     margin-bottom: 50px;
   }
   body header .explore .spidermen {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   body header .explore .spidermen * {
-    -ms-grid-column-align: center;
-        justify-self: center;
+    justify-self: center;
+  }
+  body header .explore .spidermen .card:last-child {
+    margin-left: 0;
+  }
+  body footer .about .aboutUs li:nth-child(4) {
+    display: none;
+  }
+  body footer .footer-hidden-brand {
+    display: block;
   }
 }
-/*# sourceMappingURL=main.css.map */
