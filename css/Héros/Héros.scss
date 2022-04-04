@@ -1,5 +1,7 @@
 @import url(../main.css);
+
 body{
+    overflow-x: hidden;
     background-color: var(--clr-blue);
     header{
 
@@ -11,7 +13,10 @@ body{
                 image: url(../../Illustration/img19.png);
                 repeat: no-repeat;
                 size: cover;
+                padding-bottom: 647px;
+
             }
+
             h1{
                 padding-top:400px;        
             }
@@ -24,7 +29,12 @@ body{
     main{
         .valeursTitre{
             margin: 10% 0 20px 0;
-            line-height: 30px;
+            line-height: 50px;
+            @media (max-width: 1000px) {
+                *{
+                    text-align: center;
+                }    
+            }
         }
         .valeurs{
             margin-bottom: 10%;
@@ -33,8 +43,21 @@ body{
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap:50px;
+            .sonProfil{
+                p{
+                    padding-bottom: 20px;
+                }
+            }
             .video{
                 align-self: center;
+            }
+            @media (max-width: 1000px) {
+                *{
+                    text-align: center;
+                }
+                
+                grid-template-columns: 1fr;
+                
             }
         }
         .hisPowers{
@@ -54,14 +77,29 @@ body{
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
                 gap: 40px;
+                div{
+                    p{
+                        padding-bottom: .5rem;
+                    }
+                }
             }
             .sidekicks{
+                margin-top: 100px;
+                .title2{
+                    margin-bottom: 50px;
+                }
+                
                 
                 .bestFriends{
                     margin-bottom: 100px;
                     display: grid;
                     grid-template-columns: 1fr 1fr;
+
                     .pics1{
+                        h1{
+                            margin-bottom: 30px;
+                            display: none;
+                        }
                         position: relative;
                         #Ned{
                             width: 400px;
@@ -80,25 +118,41 @@ body{
                     }
                 }
                 .loveInterest{
+                    padding-bottom: 100px;
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 100px;
                     .pics2{
                         margin-right: 20%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        align-items: center;
-                        justify-content: space-evenly;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
                         img{
                             width: 200px;
+                            &:first-child{
+                                
+                            }
+                            &:last-child{
+                                margin-left: 50%;
+                            }
+                        }
+                    }
+                    @media (max-width:1100px) {
+                        .pics2{
+                            grid-template-columns: 1fr;
+                            img{
+                                &:last-child{
+                                    margin-left: 0;
+                                }
+                            }
                         }
                     }
                 }
                 .avengers{
                     background-color: var(--clr-red);
                     display: grid;
-                    grid-template-columns: 2fr 1fr;
-                    gap: 20px;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2rem;
+                    
                     .avengersMembers{
                         h1{
                             padding: 40px 0 40px 0;
@@ -107,7 +161,7 @@ body{
                         img{
                             width: 200px;
                         }
-                        #Thor, #Clint{
+                        #Thor, #Clint, .details3{
                             justify-self: end;
                         }
                         .theTeam{
@@ -115,15 +169,15 @@ body{
                             gap: 1.5rem;
                             grid-template-columns: 1fr 1fr;
                             .details3{
-                                width: 250px;
+                                width: 300px;
                                 grid-row: span 2;
                             }
                             
                         }
                     }
-                    .Assemble{
-                        
 
+                    @media (max-width: 1000px) {
+                        display: none;
                     }
                 }
             }
@@ -174,6 +228,95 @@ body{
     body header nav .nav-dropdown .nav-menu{
         background-color: var(--clr-blue);
     }
+    body{
+        header{
+            position: relative;
+            nav{
+                background-color: transparent;
+            }
+            .quotes{
+                h3{
+                    font-size: 20px;
+                }
+            }
+        }
+        main{
 
+
+            .hisPowers{
+                .list{
+                    grid-template-columns: 1fr;
+                    grid-template-areas: 
+                    "a"
+                    "b"
+                    "c"
+                    "d";
+                    div:first-child{
+                        grid-area: a;
+                    }
+                    div:nth-child(2){
+                        grid-area: c;
+                    }
+                    div:nth-child(3){
+                        grid-area: b;
+                    }
+                    div:last-child{
+                        grid-area: d;
+                    }
+                }
+                .sidekicks{
+                    .title2{
+                        *{
+                            text-align: center;
+                        }
+                    }
+                    .bestFriends{
+                        grid-template-columns: 1fr;
+                        .pics1{
+                            position: static;
+                            text-align: center;
+                            margin-bottom: 30px;
+                            h1{
+                                display: block;
+                            }
+                            #Harry{
+                                margin-top: 20px;
+                                position: static;
+                            }
+                        }
+                        .details1{
+                            margin-right: 10%;
+                            h1{
+                                display: none;
+                            }
+                        }
+        
+                    }
+                    .loveInterest{
+                        grid-template-columns: 1fr;
+                        grid-template-areas: 
+                        "a"
+                        "b";
+                        .details2{
+                            grid-area: b;
+                            margin-right: 10%;
+                        }
+                        .pics2{
+                            grid-area: a;
+                            margin-right: 10%;
+                            grid-template-columns: repeat(3,1fr);
+                            gap: 1.5rem;
+                            
+                        }
+                    }
+                }
+            }
+            
+
+            .multiverse{
+                display: none;
+            }
+        }
+    }
 
 }

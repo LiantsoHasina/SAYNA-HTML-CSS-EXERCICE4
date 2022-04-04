@@ -17,5 +17,11 @@ body main .cliffhanger {
   body header nav .nav-dropdown .nav-menu {
     background-color: rgba(0, 0, 0, 0.5);
   }
+  body header nav {
+    background-color: var(--clr-red);
+    grid-template-columns: 1fr 2fr;
+  }
+  body header nav .nav-dropdown .nav-menu {
+    background-color: var(--clr-red);
+  }
 }
-/*# sourceMappingURL=Bonus.css.map */

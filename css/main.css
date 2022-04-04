@@ -267,7 +267,7 @@ body footer .copyright {
   }
   body header nav {
     padding-right: 0;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     position: absolute;
     background-color: transparent;
   }

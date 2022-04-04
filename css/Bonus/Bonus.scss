@@ -4,6 +4,7 @@ body{
     
     
     main{
+        // position: relative;
         background-image: url(../../Illustration/img35.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -17,12 +18,22 @@ body{
             top: 80%;
             padding-left: 10%;
 
+
         }
     }
 }
 @media  (max-width: 768px){
     body header nav .nav-dropdown .nav-menu{
         background-color: rgba(#000,.5);
+    }
+    body header nav{
+        background-color: var(--clr-red);
+        grid-template-columns: 1fr 2fr;
+        .nav-dropdown{
+            .nav-menu{
+                background-color: var(--clr-red);
+            }
+        }
     }
 
 
