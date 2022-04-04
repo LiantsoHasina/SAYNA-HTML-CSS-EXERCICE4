@@ -146,6 +146,16 @@ body{
                             }
                         }
                     }
+                    @media (max-width:1100px) {
+                        .pics2{
+                            grid-template-columns: 1fr;
+                            img{
+                                &:last-child{
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                    }
                 }
                 .avengers{
                     background-color: var(--clr-red);
@@ -167,7 +177,8 @@ body{
                         .theTeam{
                             display: grid;
                             gap: 1.5rem;
-                            grid-template-columns: 1fr 1fr;
+                            grid-template-columns: 1fr 2fr;
+                            margin-bottom: 50px;
                             .details3{
                                 width: 300px;
                                 grid-row: span 2;

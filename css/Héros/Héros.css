@@ -147,6 +147,15 @@ body main .hisPowers .sidekicks .loveInterest .pics2 img:last-child {
   }
 }
 
+@media (max-width: 1100px) {
+  body main .hisPowers .sidekicks .loveInterest .pics2 {
+    grid-template-columns: 1fr;
+  }
+  body main .hisPowers .sidekicks .loveInterest .pics2 img:last-child {
+    margin-left: 0;
+  }
+}
+
 body main .hisPowers .sidekicks .avengers {
   background-color: var(--clr-red);
   display: grid;
@@ -170,7 +179,8 @@ body main .hisPowers .sidekicks .avengers .avengersMembers #Thor, body main .his
 body main .hisPowers .sidekicks .avengers .avengersMembers .theTeam {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 50px;
 }
 
 body main .hisPowers .sidekicks .avengers .avengersMembers .theTeam .details3 {
